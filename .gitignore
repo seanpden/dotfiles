@@ -1,0 +1,7 @@
+.config/.wrangler/
+.config/go/
+.config/ncspot/
+.config/pulse/
+.config/spotify-tui/
+.config/menus/
+.config/nushell/history.txt
