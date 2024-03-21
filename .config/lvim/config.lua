@@ -7,20 +7,23 @@
 lvim.builtin.dap.active = true
 
 lvim.plugins = {
-  {
-    "catppuccin/nvim",
-    name = "catppuccin"
-  },
-  {
-    "max397574/better-escape.nvim",
-    name = "better-escape"
-  }
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+	},
+	{
+		"max397574/better-escape.nvim",
+		name = "better-escape",
+	},
+	{
+		"Exafunction/codeium.vim",
+		event = "BufEnter",
+	},
 }
 
 -- OPTS
 vim.opt.relativenumber = true
 vim.opt.scrolloff = 8
-
 
 -- COLORSCHEME
 lvim.colorscheme = "catppuccin-frappe"
@@ -31,21 +34,21 @@ lvim.keys.insert_mode["jj"] = "<esc>"
 lvim.keys.insert_mode["jk"] = "<esc>"
 
 -- FORMATTING
-local formatters = require "lvim.lsp.null-ls.formatters"
-formatters.setup {
-  { name = "black" },
-  { name = "gofumpt" , filetypes = { "go" }},
-  { name = "gofumpt" , filetypes = { "go" }},
-  { name = "rustfmt" }
-}
+local formatters = require("lvim.lsp.null-ls.formatters")
+formatters.setup({
+	{ name = "stylua", filetypes = { "lua" } },
+	{ name = "black", filetypes = { "python" } },
+	{ name = "gofumpt", filetypes = { "go" } },
+	{ name = "beautysh", filetypes = { "sh" } },
+	{ name = "rustfmt" },
+})
 lvim.format_on_save.enabled = true
-lvim.format_on_save.pattern = { "*.rs", "*.py", "*.go"}
+lvim.format_on_save.pattern = { "*.rs", "*.py", "*.go", "*.lua", "*.sh" }
 
 -- LINTING
-local linters = require "lvim.lsp.null-ls.linters"
-linters.setup {
-  {name = "ruff"},
-}
+local linters = require("lvim.lsp.null-ls.linters")
+linters.setup({
+	{ name = "ruff" },
+})
 
 -- DAP
-
