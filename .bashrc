@@ -92,7 +92,9 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias gitui='gitui -t frappe.ron'
+# alias gitui='gitui -t frappe.ron'
+alias gitui='gitui -t macchiato.ron'
+alias neofetch='neofetch --ascii ~/dotfiles/.config/neofetch/custom_distro.ascii --ascii_colors 1 2 3 4 5 6'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -131,4 +133,4 @@ export PATH=$PATH:$HOME/go/bin/
 export AIRFLOW__CORE__DAGS_FOLDER=$HOME/airflow/dags/test_dag/
 
 eval "$(starship init bash)"
-
+export WINHOME=/mnt/c/Users/seand/
