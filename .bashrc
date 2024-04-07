@@ -129,8 +129,6 @@ export PATH=$PATH:/usr/local/go/bin
 # export PATH=$PATH:/home/seanpden/go/bin/
 export PATH=$PATH:$HOME/go/bin/
 
-# export AIRFLOW__CORE__DAGS_FOLDER=/home/seanpden/airflow/dags/test_dag/
-export AIRFLOW__CORE__DAGS_FOLDER=$HOME/airflow/dags/test_dag/
 
 eval "$(starship init bash)"
 export WINHOME=/mnt/c/Users/seand/

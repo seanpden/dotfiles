@@ -8,6 +8,28 @@ lvim.builtin.dap.active = true
 
 lvim.plugins = {
 	{
+		"michaelrommel/nvim-silicon",
+		lazy = true,
+		cmd = "Silicon",
+		init = function()
+			local wk = require("which-key")
+			wk.register({
+				["<leader>sc"] = { ":Silicon<CR>", "Snapshot Code" },
+			}, { mode = "v" })
+		end,
+		config = function()
+			require("silicon").setup({
+				-- Configuration here, or leave empty to use defaults
+				font = "JetBrainsMono-Regular=34;Noto Color Emoji=34",
+				theme = "Dracula",
+				background = "#94e2d5",
+				window_title = function()
+					return vim.fn.fnamemodify(vim.api.nvim_buf_get_name(vim.api.nvim_get_current_buf()), ":t")
+				end,
+			})
+		end,
+	},
+	{
 		"catppuccin/nvim",
 		name = "catppuccin",
 	},
@@ -68,14 +90,18 @@ formatters.setup({
 	{ name = "gofumpt", filetypes = { "go" } },
 	{ name = "beautysh", filetypes = { "sh" } },
 	{ name = "rustfmt" },
+	{
+		name = "prettier",
+		filetypes = { "html", "svelte" },
+	},
 })
 lvim.format_on_save.enabled = true
-lvim.format_on_save.pattern = { "*.rs", "*.py", "*.go", "*.lua", "*.sh" }
+lvim.format_on_save.pattern = { "*.rs", "*.py", "*.go", "*.lua", "*.sh", "*.html", "*.svelte" }
 
 -- LINTING
 local linters = require("lvim.lsp.null-ls.linters")
 linters.setup({
-	{ name = "ruff" },
+	{ name = "ruff", filetypes = { "python" } },
 })
 
 -- DAP
