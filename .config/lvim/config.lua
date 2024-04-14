@@ -81,6 +81,14 @@ lvim.transparent_window = true
 -- KEYBINDING
 lvim.keys.insert_mode["jj"] = "<esc>"
 lvim.keys.insert_mode["jk"] = "<esc>"
+lvim.keys.normal_mode["|"] = ":vsplit<CR>"
+lvim.keys.normal_mode["-"] = ":split<CR>"
+lvim.builtin.which_key.mappings["W"] = {
+	name = "Window",
+	v = { ":vsplit<CR>", "Vertical Split" },
+	h = { ":split<CR>", "Horizontal Split" },
+	c = { ":q<CR>", "Quit" },
+}
 
 -- FORMATTING
 local formatters = require("lvim.lsp.null-ls.formatters")
