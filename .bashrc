@@ -92,8 +92,7 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-# alias gitui='gitui -t frappe.ron'
-alias gitui='gitui -t macchiato.ron'
+alias gitui='gitui -t mocha.ron'
 alias neofetch='neofetch --ascii ~/dotfiles/.config/neofetch/custom_distro.ascii --ascii_colors 1 2 3 4 5 6'
 
 # Add an "alert" alias for long running commands.  Use like so:
