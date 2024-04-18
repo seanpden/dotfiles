@@ -32,6 +32,11 @@ lvim.plugins = {
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
+		config = function()
+			require("catppuccin").setup({
+				flavour = "mocha",
+			})
+		end,
 	},
 	{
 		"max397574/better-escape.nvim",
@@ -45,29 +50,6 @@ lvim.plugins = {
 		"nvim-lua/plenary.nvim",
 		name = "plenary",
 	},
-	-- {
-	-- 	"scalameta/nvim-metals",
-	-- 	name = "nvim-metals",
-	-- 	filetypes = { "scala", "sbt" },
-	-- 	opts = function()
-	-- 		local metals_config = require("metals").bare_config()
-	-- 		metals_config.on_attach = function(client, bufnr)
-	-- 			-- your on_attach function
-	-- 		end
-
-	-- 		return metals_config
-	-- 	end,
-	-- 	config = function(self, metals_config)
-	-- 		local nvim_metals_group = vim.api.nvim_create_augroup("nvim-metals", { clear = true })
-	-- 		vim.api.nvim_create_autocmd("FileType", {
-	-- 			pattern = self.ft,
-	-- 			callback = function()
-	-- 				require("metals").initialize_or_attach(metals_config)
-	-- 			end,
-	-- 			group = nvim_metals_group,
-	-- 		})
-	-- 	end,
-	-- },
 }
 
 -- OPTS
@@ -75,7 +57,7 @@ vim.opt.relativenumber = true
 vim.opt.scrolloff = 8
 
 -- COLORSCHEME
-lvim.colorscheme = "catppuccin-macchiato"
+lvim.colorscheme = "catppuccin"
 lvim.transparent_window = true
 
 -- KEYBINDING
