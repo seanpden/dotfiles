@@ -132,3 +132,4 @@ export PATH=$PATH:$HOME/.duckdb
 
 eval "$(starship init bash)"
 export WINHOME=/mnt/c/Users/seand/
+export OBSIDIAN_HOME=/mnt/d/Obsidian Vault/obsidian-notes/
