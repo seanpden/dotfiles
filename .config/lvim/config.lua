@@ -77,6 +77,8 @@ local formatters = require("lvim.lsp.null-ls.formatters")
 formatters.setup({
 	{ name = "stylua", filetypes = { "lua" } },
 	{ name = "black", filetypes = { "python" } },
+	{ name = "google_java_format", filetypes = { "java" } },
+	{ name = "xmlformat", filetypes = { "xml" } },
 	{ name = "gofumpt", filetypes = { "go" } },
 	{ name = "beautysh", filetypes = { "sh" } },
 	{ name = "rustfmt" },
@@ -86,12 +88,15 @@ formatters.setup({
 	},
 })
 lvim.format_on_save.enabled = true
-lvim.format_on_save.pattern = { "*.rs", "*.py", "*.go", "*.lua", "*.sh", "*.html", "*.svelte" }
+lvim.format_on_save.pattern =
+	{ "*.rs", "*.py", "*.go", "*.lua", "*.sh", "*.html", "*.svelte", "*.java", "*.xml", "*.c", "*.cpp" }
 
 -- LINTING
 local linters = require("lvim.lsp.null-ls.linters")
 linters.setup({
 	{ name = "ruff", filetypes = { "python" } },
+	{ name = "cpplint", filetypes = { "c", "cpp" } },
+	{ name = "checkstyle", filetypes = { "java" }, extra_args = { "-c", "/google_checks.xml" } },
 })
 
 -- DAP

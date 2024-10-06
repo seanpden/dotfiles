@@ -132,4 +132,12 @@ export PATH=$PATH:$HOME/.duckdb
 
 eval "$(starship init bash)"
 export WINHOME=/mnt/c/Users/seand/
-export OBSIDIAN_HOME=/mnt/d/Obsidian Vault/obsidian-notes/
+export OBSIDIAN_HOME=/mnt/d/Obsidian\ Vault/obsidian-notes/
+export JAVA_HOME=/usr/lib/jvm/java-18-openjdk-amd64
+
+# Exports keys as environment variables
+export $(grep -v '^#' $HOME/dotfiles/.config/.env | xargs)
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

@@ -5,3 +5,5 @@
 .config/spotify-tui/
 .config/menus/
 .config/nushell/history.txt
+.config/.keys
+.config/.env
