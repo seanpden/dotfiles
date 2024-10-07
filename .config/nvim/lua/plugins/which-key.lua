@@ -8,7 +8,7 @@ return {
       -- { "<leader>wm", hidden = true },
       -- { "<leader>wd", hidden = true },
       {
-        "<leader>t",
+        "<leader>W",
         group = "windows",
         proxy = "<c-w>",
         expand = function()
