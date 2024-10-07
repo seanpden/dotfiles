@@ -8,7 +8,7 @@ vim.keymap.set({ "n" }, "<leader>;", ":Dashboard<CR>")
 vim.keymap.set({ "n" }, "<leader>f/", "<cmd>Telescope fzf<cr>", { remap = true })
 vim.keymap.set({ "n" }, "<leader>h", ":noh<CR>")
 vim.keymap.set({ "n" }, "<leader>w", ":w<CR>", { remap = true })
-vim.keymap.set({ "n" }, "<leader>w", ":q<CR>", { remap = true })
+vim.keymap.set({ "n" }, "<leader>q", ":q<CR>", { remap = true })
 
 LazyVim.toggle.map("<C-w>m", LazyVim.toggle.maximize)
 vim.keymap.del("n", "<leader>wm")
