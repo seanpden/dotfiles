@@ -96,6 +96,8 @@ alias la='ls -A'
 alias l='ls -CF'
 alias gitui='gitui -t mocha.ron'
 alias neofetch='neofetch --ascii ~/dotfiles/.config/neofetch/custom_distro.ascii --ascii_colors 1 2 3 4 5 6'
+alias sshfs_server='sudo sshfs -o allow_other,default_permissions seanpden@Lenovo-ThinkCentre:/ /home/seanpden/srv/Lenovo-ThinkCentre/'
+alias weather='curl wttr.in'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -144,3 +146,15 @@ eval "$(zellij setup --generate-auto-start bash)"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+. "$HOME/.local/bin/env"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
