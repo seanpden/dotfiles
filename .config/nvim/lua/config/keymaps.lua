@@ -10,5 +10,6 @@ vim.keymap.set({ "n" }, "<leader>h", ":noh<CR>")
 vim.keymap.set({ "n" }, "<leader>w", ":w<CR>", { remap = true })
 vim.keymap.set({ "n" }, "<leader>q", ":q<CR>", { remap = true })
 
-LazyVim.toggle.map("<C-w>m", LazyVim.toggle.maximize)
+-- LazyVim.toggle.map("<C-w>m", LazyVim.toggle.maximize)
+-- Snacks.toggle.map("<C-w>m", Snacks.toggle.maximize)
 vim.keymap.del("n", "<leader>wm")
