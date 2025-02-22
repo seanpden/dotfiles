@@ -8,3 +8,5 @@
 .config/.keys
 .config/.env
 .config/vlc
+.config/uv
+.config/fish

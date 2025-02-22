@@ -129,7 +129,7 @@ export NVM_DIR="$HOME/.nvm"
 . "$HOME/.cargo/env"
 
 export PATH=$PATH:/usr/local/go/bin
-# export PATH=$PATH:/home/seanpden/go/bin/
+export PATH=$PATH:$HOME/.local/share/coursier/bin/
 export PATH=$PATH:$HOME/go/bin/
 export PATH=$PATH:$HOME/.duckdb
 
@@ -155,6 +155,5 @@ export SDKMAN_DIR="$HOME/.sdkman"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+# Load Angular CLI autocompletion.
+# source <(ng completion script)

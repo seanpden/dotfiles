@@ -1,10 +1,23 @@
 return {
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
-      servers = {
-        ruff = {},
-      },
-    },
-  },
+  -- {
+  --   "neovim/nvim-lspconfig",
+  --   opts = {
+  --     servers = {
+  --       ruff = {},
+  --       pyright = {
+  --         settings = {
+  --           python = {
+  --             analysis = {
+  --               -- reportUntypedVariable = true,
+  --               -- typeCheckingMode = "strict",
+  --               -- autoSearchPaths = true,
+  --               -- diagnosticMode = "workspace",
+  --               -- useLibraryCodeForTypes = true,
+  --             },
+  --           },
+  --         },
+  --       },
+  --     },
+  --   },
+  -- },
 }
