@@ -132,9 +132,11 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/.local/share/coursier/bin/
 export PATH=$PATH:$HOME/go/bin/
 export PATH=$PATH:$HOME/.duckdb
+export PATH=$PATH:/usr/local/texlive/2025/bin/x86_64-linux
 
 eval "$(starship init bash)"
 export WINHOME=/mnt/c/Users/seand/
+export PATH=$PATH:$WINHOME/AppData/Local/SumatraPDF
 export OBSIDIAN_HOME=/mnt/d/Obsidian\ Vault/obsidian-notes/
 export JAVA_HOME=/usr/lib/jvm/java-18-openjdk-amd64
 

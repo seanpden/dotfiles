@@ -1,0 +1,14 @@
+[commit]
+  template = ~/.config/git/template
+
+[core]
+  compression = 9
+  editor = nvim
+
+[init]
+  defaultBranch = main
+
+[status]
+  branch = true
+  showStash = true
+  showUntrackedFiles = all
