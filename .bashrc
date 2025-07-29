@@ -159,3 +159,5 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Load Angular CLI autocompletion.
 # source <(ng completion script)
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
