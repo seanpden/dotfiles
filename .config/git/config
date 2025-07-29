@@ -4,6 +4,7 @@
 [core]
   compression = 9
   editor = nvim
+  whitespace = error
 
 [init]
   defaultBranch = main
@@ -12,3 +13,11 @@
   branch = true
   showStash = true
   showUntrackedFiles = all
+
+
+[diff]
+  interHunkContext = 10
+  renames = copies
+
+[pager]
+  diff = diff-so-fancy | less --tabs=4 -RF
