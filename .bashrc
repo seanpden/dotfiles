@@ -161,3 +161,10 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # source <(ng completion script)
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+GLOBAL_ENV_FILE=~/dotfiles/.env
+if [ -f $GLOBAL_ENV_FILE ]; then
+  source $GLOBAL_ENV_FILE
+else
+  echo "$GLOBAL_ENV_FILE does not exist!"
+fi

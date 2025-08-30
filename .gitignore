@@ -10,3 +10,4 @@
 .config/vlc
 .config/uv
 .config/fish
+.env
