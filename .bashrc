@@ -5,8 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-PS1='[\u@\h \W]\$ '
-
 DOTFILES_DIR=~/projects/dotfiles/
 
 # env file
@@ -27,3 +25,4 @@ fi
 
 # Starship
 eval "$(starship init bash)"
+eval "$PROMPT_COMMAND"
