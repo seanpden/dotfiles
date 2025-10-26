@@ -26,3 +26,4 @@ fi
 # Starship
 eval "$(starship init bash)"
 eval "$PROMPT_COMMAND"
+eval "$(zellij setup --generate-auto-start bash)"
