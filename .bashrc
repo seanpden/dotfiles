@@ -7,9 +7,6 @@
 
 PS1='[\u@\h \W]\$ '
 
-# Starship
-eval "$(starship init bash)"
-
 DOTFILES_DIR=~/projects/dotfiles/
 
 # env file
@@ -27,3 +24,6 @@ if [ -f $GLOBAL_ALIAS_FILE ]; then
 else
   echo "$GLOBAL_ALIAS_FILE does not exist!"
 fi
+
+# Starship
+eval "$(starship init bash)"
