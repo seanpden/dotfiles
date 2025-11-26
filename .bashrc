@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-DOTFILES_DIR=~/projects/dotfiles/
+DOTFILES_DIR=~/dotfiles
 
 # env file
 GLOBAL_ENV_FILE=$DOTFILES_DIR/.env
@@ -26,4 +26,15 @@ fi
 # Starship
 eval "$(starship init bash)"
 eval "$PROMPT_COMMAND"
-eval "$(zellij setup --generate-auto-start bash)"
+
+if [[ -z "$SSH_CONNECTION" ]] && [[ -z "$ZELLIJ" ]]; then
+  eval "$(zellij setup --generate-auto-start bash)"
+fi
+
+. "$HOME/.cargo/env"
+
+PATH=/usr/local/texlive/2025/bin/x86_64-linux/:$PATH
+export ELECTRON_OZONE_PLATFORM_HINT=auto
+export PATH="$HOME/.local/bin:$PATH"
+
+export PATH=$PATH:/home/seanpden/.spicetify
