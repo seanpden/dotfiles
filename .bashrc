@@ -38,3 +38,6 @@ export ELECTRON_OZONE_PLATFORM_HINT=auto
 export PATH="$HOME/.local/bin:$PATH"
 
 export PATH=$PATH:/home/seanpden/.spicetify
+
+# opencode
+export PATH=/home/seanpden/.opencode/bin:$PATH
