@@ -11,3 +11,4 @@
 .config/uv
 .config/fish
 .env
+*.DS_Store
