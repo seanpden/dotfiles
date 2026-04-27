@@ -47,3 +47,4 @@ if [ -d "$HOME/stl/prefix" ]; then export PATH="$PATH:$HOME/stl/prefix"; fi
 
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+export WEZTERM_CONFIG_FILE="$DOTFILES_DIR/.wezterm.lua"
