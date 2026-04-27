@@ -37,7 +37,13 @@ PATH=/usr/local/texlive/2025/bin/x86_64-linux/:$PATH
 export ELECTRON_OZONE_PLATFORM_HINT=auto
 export PATH="$HOME/.local/bin:$PATH"
 
-export PATH=$PATH:/home/seanpden/.spicetify
+export PATH=$PATH:$HOME/.spicetify
 
 # opencode
-export PATH=/home/seanpden/.opencode/bin:$PATH
+export PATH=$HOME/.opencode/bin:$PATH
+
+# Added by ProtonUp-Qt on 20-03-2026 23:12:38
+if [ -d "$HOME/stl/prefix" ]; then export PATH="$PATH:$HOME/stl/prefix"; fi
+
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
