@@ -1,3 +1,11 @@
+local function get_vault_path()
+  local paths = {
+    vim.fn.expand("~/Documents/my-vault"),
+    vim.fn.expand("~/Files/my-vault"),
+  }
+  return vim.iter(paths):map(vim.fn.expand):find(vim.uv.fs_stat) or error("Obsidian vault not found on this machine!")
+end
+
 return {
   "obsidian-nvim/obsidian.nvim",
   version = "*", -- use latest release, remove to use latest commit
@@ -15,7 +23,7 @@ return {
     workspaces = {
       {
         name = "personal",
-        path = "~/Documents/my-vault/",
+        path = get_vault_path(),
       },
     },
   },
