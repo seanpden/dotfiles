@@ -23,6 +23,14 @@ else
   echo "$GLOBAL_ALIAS_FILE does not exist!"
 fi
 
+# bash_functions file
+GLOBAL_FUNCTIONS_FILE=$DOTFILES_DIR/.bash_functions
+if [ -f $GLOBAL_FUNCTIONS_FILE ]; then
+  source $GLOBAL_FUNCTIONS_FILE
+else
+  echo "$GLOBAL_FUNCTIONS_FILE does not exist!"
+fi
+
 # Starship
 eval "$(starship init bash)"
 eval "$PROMPT_COMMAND"
